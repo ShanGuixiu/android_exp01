@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#008577"
+        android:padding="16dp"
+        android:text="@string/constraint_layout_test"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 输入提示文本 -->
+    <TextView
+        android:id="@+id/tv_input_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/input"
+        android:textColor="#808080"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <!-- 计算结果显示框 -->
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#D2B48C"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="16dp"
+        android:text="@string/_0_0"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_input_hint"
+        app:layout_constraintTop_toBottomOf="@+id/tv_input_hint" />
+
+    <!-- 第一行按钮：7、8、9、÷ -->
+    <TextView
+        android:id="@+id/tv_7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_7"
+        android:textSize="18sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_display"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_8"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_8"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_7"
+        app:layout_constraintTop_toTopOf="@+id/tv_7"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_9"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_8"
+        app:layout_constraintTop_toTopOf="@+id/tv_7"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_divide"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/division"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_9"
+        app:layout_constraintTop_toTopOf="@+id/tv_7"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <!-- 第二行按钮：4、5、6、× -->
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_4"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_7"
+        app:layout_constraintTop_toBottomOf="@+id/tv_7"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_5"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_4"
+        app:layout_constraintTop_toTopOf="@+id/tv_4"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_6"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_6"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_5"
+        app:layout_constraintTop_toTopOf="@+id/tv_4"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_multiply"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/multiply"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_6"
+        app:layout_constraintTop_toTopOf="@+id/tv_4"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <!-- 第三行按钮：1、2、3、+ -->
+    <TextView
+        android:id="@+id/tv_1"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_7"
+        app:layout_constraintTop_toBottomOf="@+id/tv_4"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_1"
+        app:layout_constraintTop_toTopOf="@+id/tv_1"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_3"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_2"
+        app:layout_constraintTop_toTopOf="@+id/tv_1"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/add"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_3"
+        app:layout_constraintTop_toTopOf="@+id/tv_1"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <!-- 第四行按钮：.、0、=、- -->
+    <TextView
+        android:id="@+id/tv_dot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/point"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_7"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/_0"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_dot"
+        app:layout_constraintTop_toTopOf="@+id/tv_dot"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_equal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/equal"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_0"
+        app:layout_constraintTop_toTopOf="@+id/tv_dot"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/tv_subtract"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:background="#D6D7D7"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onButtonClick"
+        android:padding="10dp"
+        android:text="@string/sub"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_equal"
+        app:layout_constraintTop_toTopOf="@+id/tv_dot"
+        app:layout_constraintWidth_percent="0.22" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

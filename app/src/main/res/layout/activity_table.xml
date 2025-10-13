@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:stretchColumns="1"
+    tools:context=".TableActivity">
+
+    <!-- 标题行 -->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:padding="10dp"
+            android:background="#949295"
+            android:text="@string/hello_tablelayout"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </TableRow>
+
+    <!-- 分隔线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_span="3"
+        android:background="#444444" />
+
+    <!-- Open... 行 -->
+    <TableRow>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/open"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="Ctrl-O"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded" />
+    </TableRow>
+
+    <!-- Save... 行 -->
+    <TableRow>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/save"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="@string/ctrl_s"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded" />
+    </TableRow>
+
+    <!-- Save As... 行 -->
+    <TableRow>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/save_as"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="@string/ctrl_shift_s"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded" />
+    </TableRow>
+
+    <!-- 分隔线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_span="2"
+        android:background="#444444" />
+
+    <!-- Import... 行 -->
+    <TableRow>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="@string/false_word"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Import..."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <!-- Export... 行 -->
+    <TableRow>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="@string/false_word"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/export"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="@string/ctrl_e"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <!-- 分隔线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_span="2"
+        android:background="#444444" />
+
+    <!-- Quit 行 -->
+    <TableRow>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/quit"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </TableRow>
+</TableLayout>
